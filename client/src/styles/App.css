@@ -1,0 +1,65 @@
+/* Styles for App */
+.App {
+  text-align: center;
+}
+
+/* Styles for App header */
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1px + 2vmin);
+  color: white;
+}
+
+/* Styles for the SignedIn view */
+.SignedIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+  flex-grow: 1;
+}
+
+/* Styles for the SignedOut view */
+.SignedOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* Container for the SignOutButton and UserButton */
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 1rem 0;
+}
+
+/* Style for individual buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #387cc5;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+
+/* Style for buttons when you hover over them */
+button:hover {
+  background-color: #0056b3;
+}

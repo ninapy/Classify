@@ -1,44 +1,24 @@
-/* index.css */
-
 /* General body styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9; /* Light gray background for contrast */
+  background-color: #f4f4f9;
 }
 
 /* Welcome page container */
 .welcome-container {
   text-align: center;
-  position: relative;  /* Allows for absolute positioning of child elements */
-  height: 100vh;       /* Full viewport height for the container */
+  position: relative;
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  align-items: center; /* Centers content horizontally */
 }
 
 /* Authentication buttons */
 .signup-button {
-  position: absolute;  /* Place the button in the top right corner */
-  top: 20px;
-  right: 20px;
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #3b82f6;  /* A vibrant blue background color */
-  color: white;
-  border: none;
-  border-radius: 25px; /* Fully rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-}
-
-.signup-button:hover {
-  background-color: #2563eb;  /* Slightly darker blue on hover */
-}
-
-.auth-button { /* For both Sign In and Sign Out buttons */
   position: absolute;
   top: 20px;
   right: 20px;
@@ -50,44 +30,64 @@ body {
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.auth-button:hover {
+.signup-button:hover {
   background-color: #2563eb;
 }
 
-/* Centered welcome message and search bar */
-h1 {
-  font-size: 36px;        /* Large font for the title */
-  color: #333;            /* Dark gray for contrast */
-  margin: 0;
-  position: relative;
-  top: 40%;               /* Positioned 40% from the top of the viewport */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
-}
-
+/* Search bar styling */
 input.search-bar {
-  padding: 20px 30px;     /* Increased padding for a prominent search bar */
-  width: 80%;             /* 80% width relative to the container */
-  font-size: 24px;        /* Larger font for readability */
+  padding: 20px 30px;
+  width: 80%;
+  font-size: 24px;
   border: 3px solid #ccc;
-  border-radius: 50px;    /* Fully rounded corners */
-  outline: none;          /* Removes default browser outline */
+  border-radius: 50px;
+  outline: none;
   background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds depth with a shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  margin-top: 20px;
-  position: relative;
-  top: 45%;               /* Positioned 40% from the top of the viewport */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
 input.search-bar:focus {
-  border-color: #3b82f6; /* Blue border on focus */
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4); /* Glow effect on focus */
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
 }
 
 input.search-bar::placeholder {
-  color: #999; /* Light gray for placeholder text */
+  color: #999;
   font-style: italic;
+}
+
+/* Upload button styling */
+.upload-button {
+  margin-top: 20px; /* Space between search bar and upload button */
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button:hover {
+  background-color: #2563eb;
+}
+
+/* Welcome message styling */
+h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* "or" text styling */
+.or-text {
+  font-size: 18px;  /* Matches the button font size */
+  color: #666;      /* Subtle gray color */
+  margin-top: 30px;
 }

@@ -1,30 +1,30 @@
 import React from "react";
-import { SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/clerk-react";
+import { useClerk } from "@clerk/clerk-react";
+import FileUpload from "./FileUpload";
 
 const WelcomePage = () => {
+  const { openSignUp } = useClerk();
+
   return (
     <div className="welcome-container">
-      {/* Header: Sign In or Sign Out Button */}
-      <div className="auth-buttons">
-        <SignedOut>
-          <SignInButton mode="modal">
-            <button className="auth-button">Sign In</button>
-          </SignInButton>
-        </SignedOut>
-        <SignedIn>
-          <SignOutButton>
-            <button className="auth-button">Sign Out</button>
-          </SignOutButton>
-        </SignedIn>
-      </div>
+      {/* Authentication Button */}
+      <button className="signup-button" onClick={() => openSignUp()}>
+        Sign Up
+      </button>
 
-      {/* Welcome Message and Search Bar */}
+      {/* Welcome Message */}
       <h1>Welcome to Classify</h1>
-      <input 
-        type="text" 
-        className="search-bar" 
-        placeholder="Search for study notes..." 
+
+      {/* Search Bar */}
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search for study notes..."
       />
+
+      {/* File Upload Section */}
+      <div className="or-text">or</div>
+      <FileUpload />
     </div>
   );
 };
